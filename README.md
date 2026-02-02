@@ -19,8 +19,8 @@ Un projet éducatif interactif pour apprendre Python en résolvant des exercices
 ### Installation
 
 ```bash
-git clone <repo-url>
-cd pythonlings
+git clone https://github.com/jordyorel/python_learning_path.git
+cd python_learning_path
 ```
 
 ### Lancer les exercices
