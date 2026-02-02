@@ -41,7 +41,7 @@ assert variable2 == 42, "Erreur message"
 print("✓ Excellent ! Tu as réussi !")
 ```
 
-## 📝 Règles pour le template
+## Règles pour le template
 
 ### Métadonnées
 
@@ -105,7 +105,7 @@ print("✓ Excellent ! Tu as réussi !")
 - [ ] Pas de dépendances externes (juste Python standard)
 - [ ] Format: `XXX_titre_court.py` (minuscules, underscores)
 
-## 🧪 Tester ton exercice
+## Tester ton exercice
 
 ```bash
 # 1. Ajoute ton fichier dans exercises/
@@ -143,7 +143,7 @@ Tu veux améliorer le système ? Voici les zones clés:
 - `run_exercise()`: Exécuter et vérifier
 - `_show_victory()`: Écran de fin
 
-## 📊 Niveaux de difficulté recommandés
+## Niveaux de difficulté recommandés
 
 | Difficulté | Concepts | Exemples |
 |-----------|----------|----------|
@@ -152,7 +152,7 @@ Tu veux améliorer le système ? Voici les zones clés:
 | ⭐⭐⭐ | Synthèse de concepts | quiz, functions complexes, logique |
 
 
-Ouvre une issue ou fais une PR ! 🚀
+Ouvre une issue ou fais une PR !
 
 ---
 
