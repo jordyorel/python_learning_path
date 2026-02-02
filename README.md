@@ -1,4 +1,4 @@
-# 🐍 Python Learning Path
+# Python Learning Path
 
 Un projet éducatif interactif pour apprendre Python en résolvant des exercices progressifs. Inspiré par [Rustlings](https://github.com/rust-lang/rustlings) et [Exercism](https://exercism.org/).
 
