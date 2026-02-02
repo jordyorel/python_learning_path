@@ -37,7 +37,7 @@ class ExerciseMetadata:
 class ExerciseRunner:
     def __init__(self):
         self.exercises = []
-        self.hints_shown = {}
+        
         self.progress = self._load_progress()
     
     def _load_progress(self):
@@ -46,13 +46,9 @@ class ExerciseRunner:
                 data = json.load(f)
                 if isinstance(data, dict):
                     if 'completed' in data:
-                        self.hints_shown = data.get('hints_shown', {})
                         return data.get('completed', {})
                     else:
-                        hints = data.pop('hints_shown', {})
-                        self.hints_shown = hints
                         return data
-        self.hints_shown = {}
         return {}
     
     def _save_progress(self, exercise_num: int, score: Optional[int] = None):
@@ -60,28 +56,9 @@ class ExerciseRunner:
             self.progress[str(exercise_num)] = score
         else:
             self.progress[str(exercise_num)] = True
-        
-        data = {
-            'completed': self.progress,
-            'hints_shown': self.hints_shown
-        }
         with open(PROGRESS_FILE, 'w') as f:
-            json.dump(data, f, indent=2)
+            json.dump(self.progress, f, indent=2)
     
-    def _save_hints_shown(self):
-        if os.path.exists(PROGRESS_FILE):
-            with open(PROGRESS_FILE, 'r') as f:
-                data = json.load(f)
-            data['hints_shown'] = self.hints_shown
-            with open(PROGRESS_FILE, 'w') as f:
-                json.dump(data, f, indent=2)
-        else:
-            data = {
-                'completed': {},
-                'hints_shown': self.hints_shown
-            }
-            with open(PROGRESS_FILE, 'w') as f:
-                json.dump(data, f, indent=2)
     
     def _reset_exercise_file(self, exercise_num: int) -> bool:
         template_files = sorted(glob.glob(os.path.join(TEMPLATES_DIR, "*.py")))
@@ -232,31 +209,10 @@ class ExerciseRunner:
         print(f"   Progression: [{bar}] {completed}/{total} ({progress_pct:.0f}%)")
         print('='*70)
     
-    def _show_hints(self, metadata: ExerciseMetadata, num_hints: int = 1):
-        if not metadata.hints:
-            return
-        
-        max_hints = min(num_hints, len(metadata.hints))
-        
-        if max_hints > 0:
-            print(f"\n{Colors.YELLOW} Indice{'s' if max_hints > 1 else ''} :{Colors.RESET}")
-            for i in range(max_hints):
-                print(f"   {i+1}. {metadata.hints[i]}")
-            
-            if max_hints < len(metadata.hints):
-                remaining = len(metadata.hints) - max_hints
-                print(f"\n   {Colors.CYAN}({remaining} autre{'s' if remaining > 1 else ''} indice{'s' if remaining > 1 else ''} disponible{'s' if remaining > 1 else ''}){Colors.RESET}")
-                print(f"   {Colors.CYAN}Relance `python3 main.py` pour voir plus d'indices 👉{Colors.RESET}")
     
     def run_exercise(self, file_path: Path, metadata: ExerciseMetadata) -> bool:
-        
         if self._has_incomplete_code(file_path):
             print(f"{Colors.YELLOW}  Le code contient encore des '{MARKER}' à compléter{Colors.RESET}")
-            hints_shown = self.hints_shown.get(str(metadata.number), 0)
-            hints_shown += 1
-            self._show_hints(metadata, hints_shown)
-            self.hints_shown[str(metadata.number)] = hints_shown
-            self._save_hints_shown()
             return False
 
         print(f"\n{Colors.BOLD}  Exécution de ton code...{Colors.RESET}\n")
@@ -269,44 +225,30 @@ class ExerciseRunner:
             )
         except subprocess.TimeoutExpired:
             print(f"{Colors.RED} Timeout: Le code a mis trop de temps à s'exécuter (>10s){Colors.RESET}")
-            hints_shown = self.hints_shown.get(str(metadata.number), 0)
-            hints_shown += 1
-            self._show_hints(metadata, hints_shown)
-            self.hints_shown[str(metadata.number)] = hints_shown
-            self._save_hints_shown()
             return False
-        
+
         # Affiche la sortie
         if result.stdout:
             print(result.stdout)
-        
+
         if result.returncode != 0:
             print(f"\n{Colors.RED} Erreur détectée :{Colors.RESET}")
             print(result.stderr)
-            
-            hints_shown = self.hints_shown.get(str(metadata.number), 0)
-            hints_shown += 1
-            self._show_hints(metadata, hints_shown)
-            self.hints_shown[str(metadata.number)] = hints_shown
-            self._save_hints_shown()
-            
             return False
-        
+
         # Succès !
         print(f"\n{Colors.GREEN}{Colors.BOLD} PARFAIT ! Exercice réussi !{Colors.RESET}")
         self._save_progress(metadata.number)
-        self.hints_shown[str(metadata.number)] = 0
-        
         return True
     
     def run_all(self, reset: bool = False):
         
         if reset:
             self._reset_all_exercises()
-            if os.path.exists(PROGRESS_FILE):
-                os.remove(PROGRESS_FILE)
-                print(f"{Colors.GREEN} Progression réinitialisée !{Colors.RESET}")
             self.progress = {}
+            with open(PROGRESS_FILE, 'w') as f:
+                json.dump({}, f, indent=2)
+            print(f"{Colors.GREEN} Progression réinitialisée !{Colors.RESET}")
         
         print(f"\n{Colors.BOLD}{Colors.BLUE}🐍 Python Learning Path{Colors.RESET}")
         
