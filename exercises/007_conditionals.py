@@ -70,5 +70,5 @@ else:
     resultat = "zéro"
 assert resultat == "zéro", f"Pour 0, le résultat devrait être 'zéro'"
 
-print("✓ Excellent ! Tu maîtrises les conditions !")
-print(f"  Les tests avec différents nombres sont tous corrects !")
+print("Excellent ! Tu maîtrises les conditions !")
+print(f"Les tests avec différents nombres sont tous corrects !")

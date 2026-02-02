@@ -1,6 +1,6 @@
 """
 EXERCISE: 017
-TITLE: 🎯 QUIZ 2 - Fondamentaux (Moyen)
+TITLE: QUIZ 2 - Fondamentaux (Moyen)
 DIFFICULTY: 2
 CONCEPTS: quiz, lists, booleans, conditionals
 ---
@@ -42,5 +42,5 @@ assert entre_10_et_20 == True, "Q3: 15 est bien entre 10 et 20"
 assert peut_voter == False, "Q4: À 16 ans, on ne peut pas voter"
 assert taille == 3, "Q5: La liste contient 3 éléments"
 
-print("✅ QUIZ 2 RÉUSSI ! (5/5)")
-print("🎉 Tu progresses bien !")
+print("QUIZ 2 RÉUSSI ! (5/5)")
+print("Tu progresses bien !")

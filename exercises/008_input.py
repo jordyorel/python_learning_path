@@ -29,4 +29,4 @@ age = ???
 assert isinstance(age, int), "age doit être un entier"
 assert age == 25, "age doit être 25"
 
-print(f"✓ Tu as {age} ans !")
+print(f"Tu as {age} ans !")

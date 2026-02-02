@@ -44,7 +44,7 @@ assert premiere_couleur == couleurs[0], "premiere_couleur doit être le premier 
 assert derniere_couleur == couleurs[-1], "derniere_couleur doit être le dernier élément"
 assert nombre_couleurs == 4, "nombre_couleurs doit être 4"
 
-print("✓ Parfait ! Tu maîtrises les bases des listes !")
+print("Parfait ! Tu maîtrises les bases des listes !")
 print(f"  Liste : {couleurs}")
 print(f"  Première couleur : {premiere_couleur}")
 print(f"  Dernière couleur : {derniere_couleur}")

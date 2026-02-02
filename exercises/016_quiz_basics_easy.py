@@ -1,6 +1,6 @@
 """
 EXERCISE: 016
-TITLE: 🎯 QUIZ 1 - Fondamentaux (Facile)
+TITLE: QUIZ 1 - Fondamentaux (Facile)
 DIFFICULTY: 2
 CONCEPTS: quiz, variables, types, strings
 ---
@@ -39,5 +39,5 @@ assert resultat_multiplication == 42, "Q3: 7 * 6 = 42"
 assert message == "Hello World", "Q4: Concaténation incorrecte"
 assert description == "Python 3", "Q5: F-string incorrecte"
 
-print("✅ QUIZ 1 RÉUSSI ! (5/5)")
-print("🎉 Tu maîtrises les fondamentaux !")
+print("QUIZ 1 RÉUSSI ! (5/5)")
+print("Tu maîtrises les fondamentaux !")

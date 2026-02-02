@@ -1,6 +1,6 @@
 """
 EXERCISE: 018
-TITLE: 🎯 QUIZ 3 - Fondamentaux (Difficile)
+TITLE: QUIZ 3 - Fondamentaux (Difficile)
 DIFFICULTY: 3
 CONCEPTS: quiz, synthesis, all concepts
 ---
@@ -56,6 +56,6 @@ assert x == 10 and y == 20, "Q5: Déstructuration"
 assert fruits == ["pomme", "banane", "orange"], "Q6a: Ajout à la liste"
 assert phrase == "J'ai 3 fruits", "Q6b: F-string avec len()"
 
-print("✅ QUIZ 3 RÉUSSI ! (8/8)")
-print("🎉🎉 CHAPITRE 1 TERMINÉ !")
-print("🚀 Tu es prêt(e) pour le Chapitre 2 : Boucles")
+print("QUIZ 3 RÉUSSI ! (8/8)")
+print("CHAPITRE 1 TERMINÉ !")
+print("Tu es prêt(e) pour le Chapitre 2 : Boucles")

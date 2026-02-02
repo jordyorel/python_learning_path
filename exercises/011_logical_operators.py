@@ -35,4 +35,4 @@ assert est_adulte == True, "25 ans est adulte"
 assert peut_conduire == True, "Adulte avec permis peut conduire"
 assert est_mineur == False, "25 ans n'est pas mineur"
 
-print("✓ Tu maîtrises les opérateurs logiques !")
+print("Tu maîtrises les opérateurs logiques !")

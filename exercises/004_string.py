@@ -38,6 +38,6 @@ presentation = ???  # ex: f"Je suis {prenom} et j'ai {age} ans"
 assert salutation == "Alice Martin", f"salutation incorrect : {salutation}"
 assert presentation == "Je suis Alice et j'ai 28 ans", f"presentation incorrect : {presentation}"
 
-print(f"✓ Bravo !")
+print(f"Bravo !")
 print(f"  Salutation : {salutation}")
 print(f"  Présentation : {presentation}")

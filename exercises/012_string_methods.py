@@ -33,4 +33,4 @@ assert texte_majuscules == "  PYTHON  ", "Mettre en majuscules"
 assert texte_minuscules == "  python  ", "Mettre en minuscules"
 assert texte_nettoye == "Python", "Enlever les espaces"
 
-print("✓ Méthodes de chaînes maîtrisées !")
+print("Méthodes de chaînes maîtrisées !")

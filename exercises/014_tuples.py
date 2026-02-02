@@ -33,4 +33,4 @@ assert isinstance(point, tuple), "point doit être un tuple"
 assert point == (5, 10), "point doit être (5, 10)"
 assert x == 5 and y == 10, "x=5, y=10"
 
-print(f"✓ Coordonnées : ({x}, {y})")
+print(f"Coordonnées : ({x}, {y})")

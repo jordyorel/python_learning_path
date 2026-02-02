@@ -32,7 +32,7 @@ assert soustraction == 13, f"soustraction devrait être 13, pas {soustraction}"
 assert multiplication == 24, f"multiplication devrait être 24, pas {multiplication}"
 assert puissance == 9, f"puissance devrait être 9, pas {puissance}"
 
-print(f"✓ Toutes les opérations sont correctes !")
+print(f"Toutes les opérations sont correctes !")
 print(f"  10 + 5 = {addition}")
 print(f"  20 - 7 = {soustraction}")
 print(f"  6 × 4 = {multiplication}")

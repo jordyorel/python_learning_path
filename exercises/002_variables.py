@@ -32,4 +32,4 @@ assert isinstance(age, int), "age doit être un nombre entier"
 assert len(nom) > 0, "nom ne peut pas être vide"
 assert age > 0, "age doit être positif"
 
-print(f"✓ Bravo ! Je m'appelle {nom} et j'ai {age} ans")
+print(f"Bravo ! Je m'appelle {nom} et j'ai {age} ans")

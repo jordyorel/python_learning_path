@@ -31,4 +31,4 @@ assert nombre_vers_texte == "50" and isinstance(nombre_vers_texte, str)
 assert texte_vers_decimal == 3.14 and isinstance(texte_vers_decimal, float)
 assert decimal_vers_entier == 7 and isinstance(decimal_vers_entier, int)
 
-print("✓ Conversions réussies !")
+print("Conversions réussies !")

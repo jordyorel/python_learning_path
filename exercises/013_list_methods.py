@@ -32,4 +32,4 @@ animaux = ["chien", "oiseau"]
 # Tests
 assert animaux == ["chien", "chat"], f"Attendu ['chien', 'chat'], reçu {animaux}"
 
-print("✓ Tu sais modifier les listes !")
+print("Tu sais modifier les listes !")

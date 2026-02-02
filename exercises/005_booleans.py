@@ -40,7 +40,7 @@ assert est_egal == True, "20 est bien égal à 20"
 assert est_different == True, "5 est bien différent de 3"
 assert texte_egal == True, '"Python" est bien égal à "Python"'
 
-print("✓ Toutes les comparaisons sont correctes !")
+print("Toutes les comparaisons sont correctes !")
 print(f"  15 > 10 : {est_plus_grand}")
 print(f"  20 == 20 : {est_egal}")
 print(f"  5 != 3 : {est_different}")

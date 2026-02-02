@@ -33,5 +33,5 @@ resultat = ???
 assert nom == "Python"
 assert resultat == 50
 
-print("✓ Bon travail ! Les commentaires rendent le code plus clair.")
-print("  Note : Les commentaires commencent par # et sont ignorés par Python")
+print("Bon travail ! Les commentaires rendent le code plus clair.")
+print("Note : Les commentaires commencent par # et sont ignorés par Python")

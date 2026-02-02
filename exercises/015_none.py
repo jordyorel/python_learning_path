@@ -35,4 +35,4 @@ a_valeur = ???  # valeur is not None
 assert est_vide == True, "None devrait être détecté"
 assert a_valeur == True, "42 n'est pas None"
 
-print("✓ Tu comprends None !")
+print("Tu comprends None !")
