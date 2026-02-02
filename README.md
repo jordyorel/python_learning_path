@@ -2,7 +2,7 @@
 
 Un projet éducatif interactif pour apprendre Python en résolvant des exercices progressifs. Inspiré par [Rustlings](https://github.com/rust-lang/rustlings) et [Exercism](https://exercism.org/).
 
-## 🎯 Objectifs
+## Objectifs
 
 - Apprendre les concepts fondamentaux de Python
 - Progresser graduellement du basique au intermédiaire
@@ -36,7 +36,7 @@ python3 main.py --reset
 python3 main.py --reset-exercise 1
 ```
 
-## 🎮 Comment utiliser
+## Comment utiliser
 
 ### 1 Résoudre un exercice
 
@@ -137,7 +137,7 @@ Lis le message d'erreur Python et utilise les indices fournis. Relaance pour voi
 
 L'exercice manque le bloc `"""..."""` au début. Assure-toi que le format suit la structure standard.
 
-## 🎓 Bonnes pratiques
+## Bonnes pratiques
 
 1. **Progresse en ordre** - Les exercices doivent être faits dans l'ordre
 2. **Lis les descriptions** - Chaque exercice enseigne un concept
@@ -149,12 +149,12 @@ L'exercice manque le bloc `"""..."""` au début. Assure-toi que le format suit l
 
 Après avoir complété tous les exercices, tu es prêt pour :
 
-- 📚 Lire un tutoriel Python complet
-- 🛠️ Faire des petits projets (calculatrice, jeu, scraper web)
-- 📚 Consulter la [documentation officielle Python](https://docs.python.org/3/)
-- 🌐 Essayer des défis sur [Exercism.org](https://exercism.org/), [LeetCode](https://leetcode.com/), [HackerRank](https://www.hackerrank.com/)
+- Lire un tutoriel Python complet
+- Faire des petits projets (calculatrice, jeu, scraper web)
+- Consulter la [documentation officielle Python](https://docs.python.org/3/)
+- ssayer des défis sur [Exercism.org](https://exercism.org/), [LeetCode](https://leetcode.com/), [HackerRank](https://www.hackerrank.com/)
 
-## 📄 Licence
+## Licence
 
 MIT - Tu peux utiliser ce projet librement !
 
