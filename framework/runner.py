@@ -26,7 +26,6 @@ class Colors:
 
 @dataclass
 class ExerciseMetadata:
-    """Métadonnées extraites du docstring"""
     number: int
     title: str
     difficulty: int
@@ -227,7 +226,6 @@ class ExerciseRunner:
             print(f"{Colors.RED} Timeout: Le code a mis trop de temps à s'exécuter (>10s){Colors.RESET}")
             return False
 
-        # Affiche la sortie
         if result.stdout:
             print(result.stdout)
 
@@ -236,7 +234,6 @@ class ExerciseRunner:
             print(result.stderr)
             return False
 
-        # Succès !
         print(f"\n{Colors.GREEN}{Colors.BOLD} PARFAIT ! Exercice réussi !{Colors.RESET}")
         self._save_progress(metadata.number)
         return True
@@ -250,7 +247,7 @@ class ExerciseRunner:
                 json.dump({}, f, indent=2)
             print(f"{Colors.GREEN} Progression réinitialisée !{Colors.RESET}")
         
-        print(f"\n{Colors.BOLD}{Colors.BLUE}🐍 Python Learning Path{Colors.RESET}")
+        print(f"\n{Colors.BOLD}{Colors.BLUE}Python Learning Path{Colors.RESET}")
         
         pattern = os.path.join(EXERCISES_DIR, "*.py")
         exercise_files = sorted(glob.glob(pattern))
@@ -291,7 +288,7 @@ class ExerciseRunner:
     def _show_victory(self, total: int):
         print(f"\n{'='*70}")
         print(f"{Colors.GREEN}{Colors.BOLD}")
-        print("   🎉 FÉLICITATIONS ! 🎉")
+        print(" FÉLICITATIONS !")
         print(f"{Colors.RESET}")
         print(f"{Colors.GREEN}Tu as complété tous les {total} exercices !{Colors.RESET}")
         print('='*70)
@@ -309,17 +306,17 @@ class ExerciseRunner:
                 pass
         
         if quiz_scores:
-            print(f"\n{Colors.CYAN}📊 Scores des quiz :{Colors.RESET}")
+            print(f"\n{Colors.CYAN} Scores des quiz :{Colors.RESET}")
             total_quiz_score = 0
             for quiz_num in sorted(quiz_scores.keys()):
                 score = quiz_scores[quiz_num]
                 if isinstance(score, int):
                     total_quiz_score += score
-                    print(f"   • Quiz {quiz_num - 15}: {score}/5 ⭐")
+                    print(f" Quiz {quiz_num - 15}: {score}/5 ")
             
             if len(quiz_scores) == 3:
                 avg_score = total_quiz_score / 3
-                rating = "🌟 Parfait !" if avg_score >= 4.5 else "✨ Très bien !" if avg_score >= 4 else "👍 Bien !"
+                rating = " Parfait !" if avg_score >= 4.5 else " Très bien !" if avg_score >= 4 else " Bien !"
                 print(f"\n   Moyenne: {avg_score:.1f}/5 {rating}")
         
         concepts_count = {}
@@ -330,11 +327,11 @@ class ExerciseRunner:
                     concepts_count[concept] = concepts_count.get(concept, 0) + 1
         
         if concepts_count:
-            print(f"\n{Colors.CYAN}📚 Concepts maîtrisés :{Colors.RESET}")
+            print(f"\n{Colors.CYAN} Concepts maîtrisés :{Colors.RESET}")
             for concept, count in sorted(concepts_count.items(), key=lambda x: -x[1]):
-                print(f"   • {concept}: {count} exercice{'s' if count > 1 else ''}")
+                print(f" {concept}: {count} exercice{'s' if count > 1 else ''}")
         
-        print(f"\n{Colors.BOLD}Tu es maintenant prêt(e) pour des projets plus avancés ! 🚀{Colors.RESET}\n")
+        print(f"\n{Colors.BOLD}Tu es maintenant prêt(e) pour des projets plus avancés ! {Colors.RESET}\n")
 
 def main():
     parser = argparse.ArgumentParser(description=' Python Learning Path - Exercices progressifs')
