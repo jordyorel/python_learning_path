@@ -39,27 +39,21 @@ python3 main.py --reset-exercise 1
 ## Comment utiliser
 
 ### 1 Résoudre un exercice
-
-Quand tu lances `python3 main.py`, tu vois le premier exercice non-complété :
-
-```
-
+Quand tu lances `python3 main.py`, tu vois le premier exercice non-complété 
 L'exercice contient du code avec des marqueurs `???` à remplacer.
 
 ### 2 Éditer le fichier
-
 Ouvre le fichier indiqué (ex: `exercises/001_hello.py`) et remplace les `???` par ta solution :
 
+
 ### 3 Vérifier ta solution
-
 Relance le programme pour vérifier :
-
 ```bash
 python3 main.py
 ```
+```
 
 ## Suivi de progression
-
 Ta progression est sauvegardée dans `progress.json` :
 
 ```json
