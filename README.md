@@ -51,7 +51,7 @@ Relance le programme pour vérifier :
 ```bash
 python3 main.py
 ```
-```
+
 
 ## Suivi de progression
 Ta progression est sauvegardée dans `progress.json` :
