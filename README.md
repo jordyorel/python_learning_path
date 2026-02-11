@@ -91,4 +91,4 @@ Des suggestions ou corrections ? Ouvert aux contributions !
 
 ---
 
-**Bon apprentissage ! Happy coding! **
+Bon apprentissage ! Happy coding!
